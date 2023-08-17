@@ -1,0 +1,139 @@
+import random
+
+print('''Chapéu seletor: Seja muito bem vindo a hogwards!
+
+Chapéu seletor: Sou o chapéu seletor e faço isso há gerações aqui neste castelo.''')
+
+print('-'*110)
+
+nome = str(input('''Chapéu seletor: Antes de comerçarmos diga-me. 
+
+Chapéu seletor: Qual o seu nome meu caro bruxo(a)? '''))
+
+print('-'*110)
+
+print(f'''Chapéu seletor: Muito bem {nome}, vamos descobrir para qual casa você vai...
+
+Chapéu seletor: Mas antes me fale mais sobre quais são as suas expectativas?''')
+
+print('-'*110)
+
+print('''[1] Mal posso esperar pelas aulas.
+[2] Mal posso esperar para explorar.
+[3] Não tenho expectativas.''')
+
+print()
+
+selecionar = 0 
+while selecionar != 1 and selecionar != 2 and selecionar != 3:
+  selecionar = int(input('Escolha uma das opções: '))
+ 
+  print('-'*110)
+
+  if selecionar == 1:
+    print('''Chapéu seletor: Hmmm. Entendo, você deve estar ansioso(a) para aprender com todos os professores.
+    
+Chapéu seletor: Humm. Eu me pergunto... Detectei alguma coisa em você. Hum. Um sendo de... Hum. O que é?''')
+
+  elif selecionar == 2:
+    print('''Chapéu seletor: Humm. Vejamos, explorar as terras além do castelo é realmente magnífico!
+    
+Chapéu seletor: Humm. Eu me pergunto... Detectei alguma coisa em você. Hum. Um sendo de... Hum. O que é?''')
+  
+  elif selecionar == 3:
+    print('Chapéu seletor: Hum. Compriendo...')
+
+  else:
+    print('Chapéu seletor: Meu caro bruxo(a), essa opção é inválida.')
+    
+print('-'*110)
+
+print('''[1] Ousadia.
+[2] Curiosidade.
+[3] Lealdade.
+[4] Ambição.''')
+
+print()
+
+opções = 0 
+while opções != 1 and opções != 2 and opções != 3 and opções != 4:
+  opções = int(input('Escolha uma das opções: '))
+
+  print('-'*110)
+
+  if opções == 1:
+    print(f'{nome}: Um senso de aventura? Gosto de pensar que não tenho medo de nada.')
+
+  elif opções == 2:
+    print(f'{nome}: Um desejo de aprender? Adoro um bom quebra-cabeça, e diria que tenho uma mente afiada.')
+
+  elif opções == 3:
+    print(f'{nome}: Um senso de lealdade? Sou filel ás minhas amizades, e valorizo pessoas com essa característica.')
+
+  elif opções == 4:
+    print(f'{nome}: Um senso de ambição? Posso demonstrar certa teimosia, mas é importante perseguir seus objetivoscom obstinação.')
+
+  else:
+    print('Chapéu seletor: Meu caro bruxo(a), essa opção é inválida.')
+
+casas = ['Grifinória', 'Lufa-Lufa', 'Corvinal', 'Sonserina']
+
+casa = random.choice(casas)
+
+print('-'*110)
+
+print(f'Chapéu seletor: Talvez o melhor seja {casa}.')
+
+print()
+
+print('''[1] Aceitar casa.
+[2] Escolher outra casa.''')
+
+print()
+
+escolha = 0 
+while escolha != 1 and escolha != 2:
+  escolha = int(input('Escolha uma das opções: '))
+  
+  print('-'*100)
+
+  if escolha == 1:
+    print(f'Chapéu seletor: {nome} seja bem vindo(a) a casa de {casa}!') 
+    break
+
+  elif escolha == 2:
+    print('Chapéu seletor: Escolha a casa para qual deseja ir: ')
+    
+  else:
+    print('Chapéu seletor: Meu caro bruxo(a), essa opção é inválida.')
+
+  print()
+
+  print('''[1] Grifinória.
+[2] Lufa-Lufa.
+[3] Corvinal.
+[4] Sonserina.''')
+
+  print()
+
+  variavel_1 = 0
+# Esse while está dentro de outro while, só dessa forma que eu consegui fazer com que o break do if escolha == 1 fosse atendido e não rodasse o restante do código caso a opção de aceitar a casa fosse escolhida
+  while variavel_1 != 1 and variavel_1 != 2 and variavel_1 != 3 and variavel_1 != 4:
+    variavel_1 = int(input('Faça sua escolha: '))
+
+  print('-'*110)
+
+  if variavel_1 == 1:
+      print(f'Chapéu seletor: {nome} seja bem vindo(a) a casa de Grifinória!')
+  
+  elif variavel_1 == 2:
+      print(f'Chapéu seletor: {nome} seja bem vindo(a) a casa de Lufa-Lufa!')
+
+  elif variavel_1 == 3:
+      print(f'Chapéu seletor: {nome} seja bem vindo(a) a casa de Corvinal!')
+
+  elif variavel_1 == 4:
+      print(f'Chapéu seletor: {nome} seja bem vindo(a) a casa de Sonserina!')
+
+  else:
+      print('Chapéu seletor: Meu caro bruxo(a), essa opção é inválida.')
